@@ -1,0 +1,35 @@
+<app-dashboard></app-dashboard>
+
+<form #myform="ngForm" method="post" class="container col-md-4" (ngSubmit)="updateReview(myform.value)">
+    <div class="form-group">
+        <label>Review ID:</label>
+        <input type="number" class="form-control" name="reviewId" #reviewIdControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="reviewIdControl.touched && reviewIdControl.invalid">Review ID is mandatory</span>
+    </div> 
+    
+    <div class="form-group">
+        <label>Customer Name:</label>
+        <input type="text" class="form-control" name="customerName" #customerNameControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="customerNameControl.touched && customerNameControl.invalid">Customer Name is mandatory</span>
+    </div>
+    
+    <div class="form-group">
+        <label>Driver Name:</label>
+        <input type="text" class="form-control" name="driverName" #driverNameControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="driverNameControl.touched && driverNameControl.invalid">Driver Name is mandatory</span>
+    </div>
+    
+    <div class="form-group">
+        <label>Rating:</label>
+        <input type="number" class="form-control" min="1" max="5" name="rating" #ratingControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="ratingControl.touched && ratingControl.invalid">Rating is mandatory and must be between 1 and 5</span>
+    </div>
+    
+    <div class="form-group">
+        <label>Comments:</label>
+        <textarea class="form-control" name="comments" #commentsControl="ngModel" required ngModel></textarea>
+        <span style="color: red;" *ngIf="commentsControl.touched && commentsControl.invalid">Comments are mandatory</span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" [disabled]="myform.invalid">Update</button>
+</form>

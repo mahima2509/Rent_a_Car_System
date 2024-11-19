@@ -1,0 +1,28 @@
+<app-dashboard></app-dashboard>
+
+<div class="container">
+    <table class="table table-primary col-sm-5">
+        <tr>
+            <th>SNO.</th>
+            <th>Cab ID</th>
+            <th>Cab Name</th>
+            <th>DateOfBook</th>
+            <th>Driver ID</th>
+            <th>Driver Name</th>
+            <th>Driver Rating</th>
+            <th>DELETE</th>
+        </tr>
+        <tr *ngFor="let cab of cabList; index as i">
+            <td>{{i + 1}}</td>
+            <td>{{cab.cabId}}</td>
+            <td>{{cab.cabName}}</td>
+            <td>{{cab.dateOfBook}}</td>
+            <td>{{cab.driverId}}</td>
+            <td>{{cab.driverName}}</td>
+            <td>{{cab.driverRating}}</td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="deleteById(cab.cabId)">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

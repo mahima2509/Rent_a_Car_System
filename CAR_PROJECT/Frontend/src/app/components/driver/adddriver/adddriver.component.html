@@ -1,0 +1,29 @@
+<app-dashboard></app-dashboard>
+
+<form #myform="ngForm" method="post" class="container col-md-4" (ngSubmit)="insertDriver(myform.value)">
+   <!-- <div class="form-group">
+        <label>Driver ID:</label>
+        <input type="number" class="form-control" name="driverId" #driverIdControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="driverIdControl.touched && driverIdControl.invalid">Driver ID is Mandatory</span>
+    </div> -->
+    
+    <div class="form-group">
+        <label>Driver Name:</label>
+        <input type="text" class="form-control" name="driverName" #driverNameControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="driverNameControl.touched && driverNameControl.invalid">Driver Name is Mandatory</span>
+    </div>
+    
+    <div class="form-group">
+        <label>Fare:</label>
+        <input type="number" class="form-control" name="fare" #fareControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="fareControl.touched && fareControl.invalid">Fare is Mandatory</span>
+    </div>
+    
+    <div class="form-group">
+        <label>Rating:</label>
+        <input type="number" step="0.1" class="form-control" name="rating" #ratingControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="ratingControl.touched && ratingControl.invalid">Rating is Mandatory</span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" [disabled]="myform.invalid">Add</button>
+</form>

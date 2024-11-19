@@ -1,0 +1,53 @@
+<app-dashboard></app-dashboard>
+
+<form #myform="ngForm" method="post" class="container col-md-4" (ngSubmit)="updateBooking(myform.value)">
+    <div class="form-group">
+        <label>Booking ID:</label>
+        <input type="number" class="form-control" name="bookingId" #bookingIdControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="bookingIdControl.touched && bookingIdControl.invalid">
+            Booking ID is mandatory
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label>Cab Name:</label>
+        <input type="text" class="form-control" name="cabName" #cabNameControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="cabNameControl.touched && cabNameControl.invalid">
+            Cab Name is mandatory
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label>Start Location:</label>
+        <input type="text" class="form-control" name="startLocation" #startLocationControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="startLocationControl.touched && startLocationControl.invalid">
+            Start Location is mandatory
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label>End Location:</label>
+        <input type="text" class="form-control" name="endLocation" #endLocationControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="endLocationControl.touched && endLocationControl.invalid">
+            End Location is mandatory
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label>Trip Date:</label>
+        <input type="date" class="form-control" name="tripDate" #tripDateControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="tripDateControl.touched && tripDateControl.invalid">
+            Trip Date is mandatory
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label>Duration:</label>
+        <input type="text" class="form-control" name="duration" #durationControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="durationControl.touched && durationControl.invalid">
+            Duration is mandatory
+        </span>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="myform.invalid">Update</button>
+</form>

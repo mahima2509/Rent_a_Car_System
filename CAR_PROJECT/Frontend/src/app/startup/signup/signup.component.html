@@ -1,0 +1,22 @@
+<app-dashboard></app-dashboard>
+<div class="container">
+    <h2 style="text-align: center;"> Signup</h2>
+    <form (submit)="signup()" class="d-flex align-item-center" style="margin: 0 auto; flex-direction: column; min-width: 20em; width: 40%;">
+        <label for="username">Username:</label>
+        <input class="form-control" type="text" id="username" [(ngModel)]="signupForm.username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input class="form-control" type="password" id="password" [(ngModel)]="signupForm.password" name="password" required>
+
+        <label for="address">Address:</label>
+        <input class="form-control" type="text" id="address" [(ngModel)]="signupForm.address" name="address" required>
+
+        <label for="email">Email:</label>
+        <input class="form-control" type="email" id="email" [(ngModel)]="signupForm.email" name="email" required>
+
+        <label for="roles">Roles:</label>
+        <input class="form-control" type="text" id="roles" [(ngModel)]="signupForm.roles" name="roles" required>
+
+        <button class="btn btn-primary mt-4" style="min-width: fit-content; width: 10em; align-self: center; " type="submit">Signup</button>
+    </form>
+</div>

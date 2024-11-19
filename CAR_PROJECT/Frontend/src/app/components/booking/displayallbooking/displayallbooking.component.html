@@ -1,0 +1,36 @@
+<app-dashboard></app-dashboard>
+<div class="container">
+    <table class="table table-primary col-sm-5">
+        <thead>
+            <tr>
+                <th>SNO.</th>
+                <th>Booking ID</th>
+                <th>Cab Name</th>
+                <th>Start Location</th>
+                <th>End Location</th>
+                <th>Trip Date</th>
+                <th>Duration</th>
+                <th>DELETE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let booking of bookingList; index as i">
+                <td>{{i + 1}}</td>
+                <td>{{booking.bookingId}}</td>
+                <td>{{booking.cabName}}</td>
+                <td>{{booking.startLocation}}</td>
+                <td>{{booking.endLocation}}</td>
+                <td>{{booking.tripDate}}</td>
+                <td>{{booking.duration}}</td>
+                <td>
+                    <button 
+                        type="button" 
+                        class="btn btn-danger" 
+                        (click)="deleteById(booking.bookingId)">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

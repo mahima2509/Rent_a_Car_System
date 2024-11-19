@@ -1,0 +1,23 @@
+[32m2024-10-16 00:09:00.981[0;39m [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=23m58s204ms699µs900ns).
+[32m2024-10-16 01:49:48.159[0;39m [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21m43s480ms989µs900ns).
+[32m2024-10-16 02:58:39.043[0;39m [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h8m50s921ms385µs400ns).
+[32m2024-10-16 03:53:04.173[0;39m [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51m55s77ms474µs200ns).
+[32m2024-10-16 04:49:43.667[0;39m [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m39s411ms838µs900ns).
+[32m2024-10-16 05:45:55.698[0;39m [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m11s984ms617µs400ns).
+[32m2024-10-16 06:42:34.195[0;39m [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m8s461ms391µs700ns).
+[32m2024-10-16 06:54:17.971[0;39m [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m43s737ms721µs300ns).
+[32m2024-10-16 08:54:04.298[0;39m [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h58m16s309ms56µs500ns).
+[32m2024-10-16 09:45:20.525[0;39m [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47m46s23ms597µs100ns).
+[32m2024-10-16 10:45:27.614[0;39m [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21m4s895ms488µs200ns).
+[32m2024-10-16 11:08:45.123[0;39m [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21m17s470ms587µs300ns).
+[32m2024-10-16 13:25:42.067[0;39m [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=42m25s149ms599µs500ns).
+[32m2024-10-16 13:52:40.477[0;39m [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m57s143ms734µs900ns).
+[32m2024-10-16 14:20:40.052[0;39m [INFO] com.wipro.driverapi.restcontroller.DriverRestController [http-nio-8282-exec-10] I am info
+[32m2024-10-16 14:20:40.063[0;39m [WARN] com.wipro.driverapi.restcontroller.DriverRestController [http-nio-8282-exec-10] I am warning
+[32m2024-10-16 14:20:40.064[0;39m [ERROR] com.wipro.driverapi.restcontroller.DriverRestController [http-nio-8282-exec-10] I am error
+[32m2024-10-16 14:20:40.064[0;39m [INFO] com.wipro.driverapi.service.DriverServiceImp [http-nio-8282-exec-10] Fetching all drivers from service class
+[32m2024-10-16 14:20:40.064[0;39m [WARN] com.wipro.driverapi.service.DriverServiceImp [http-nio-8282-exec-10] Fetching all drivers from service class
+[32m2024-10-16 14:46:57.532[0;39m [INFO] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(436)-127.0.0.1] Application shutdown requested.
+[32m2024-10-16 14:46:57.843[0;39m [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(436)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+[32m2024-10-16 14:46:57.921[0;39m [INFO] com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(436)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+[32m2024-10-16 14:46:57.939[0;39m [INFO] com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(436)-127.0.0.1] HikariPool-1 - Shutdown completed.

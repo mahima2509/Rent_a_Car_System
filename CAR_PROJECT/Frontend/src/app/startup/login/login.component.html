@@ -1,0 +1,13 @@
+<app-dashboard></app-dashboard>
+<div class="container">
+    <h2 style="text-align: center;">Login</h2>
+    <form (submit)="login()" class="d-flex align-item-center" style="margin: 0 auto; flex-direction: column; min-width: 20em; width: 40%;">
+        <label for="loginUsername">Username:</label>
+        <input class="form-control" type="text" id="loginUsername" [(ngModel)]="loginForm.username" name="loginUsername" required>
+
+        <label for="loginPassword">Password:</label>
+        <input class="form-control" type="password" id="loginPassword" [(ngModel)]="loginForm.password" name="loginPassword" required>
+
+        <button class="btn btn-primary mt-4" style="min-width: fit-content; width: 10em; align-self: center;" type="submit">Login</button>
+    </form>
+</div>

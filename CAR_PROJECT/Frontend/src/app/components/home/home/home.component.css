@@ -1,0 +1,24 @@
+.bg-image {
+    position: relative;
+    max-width: 100%; /* Limit the width of the container */
+   height: auto;  /* Allow height to adjust based on content */
+   
+    overflow: hidden; /* Hide overflow for better aesthetics */
+}
+
+.bg-image img {
+    width: 100%; /* Make the image responsive to the container width */
+    height: 123vh; /* Set a maximum height for the image */
+    object-fit: cover; /* Crop the image to cover the area */
+    display: block; /* Remove extra space below the image */
+    background-size: contain ;
+}
+
+.welcome-text {
+    position: relative; /* Position relative to its parent */
+    color: white; /* Text color */
+    font-size: 3.5rem; /* Adjust font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+    text-align: center; /* Center the text */
+    margin: -300px 0 0 0; /* Adjust margin to position text on the image */
+}

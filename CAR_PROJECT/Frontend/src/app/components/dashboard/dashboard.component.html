@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <div class="container-fluid">
+        <a class="navbar-brand">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="cabDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Cab
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="cabDropdown">
+                        <li><a class="dropdown-item" routerLink="/addcab">Add Cab</a></li>
+                        <li><a class="dropdown-item" routerLink="/updatecab">Update Cab</a></li>
+                        <li><a class="dropdown-item" routerLink="/displayallcab">Display All Cabs</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="driverDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Driver
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="driverDropdown">
+                        <li><a class="dropdown-item" routerLink="/adddriver">Add Driver</a></li>
+                        <li><a class="dropdown-item" routerLink="/updatedriver">Update Driver</a></li>
+                        <li><a class="dropdown-item" routerLink="/displayalldriver">Display All Drivers</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="bookingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Booking
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="bookingDropdown">
+                        <li><a class="dropdown-item" routerLink="/addbooking">Add Booking</a></li>
+                        <li><a class="dropdown-item" routerLink="/updatebooking">Update Booking</a></li>
+                        <li><a class="dropdown-item" routerLink="/displayallbooking">Display All Bookings</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="reviewDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Review
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="reviewDropdown">
+                        <li><a class="dropdown-item" routerLink="/addreview">Add Review</a></li>
+                        <li><a class="dropdown-item" routerLink="/updatereview">Update Review</a></li>
+                        <li><a class="dropdown-item" routerLink="/displayallreview">Display All Reviews</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="account">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown" *ngIf="!isLoggedIn()">
+                    <a class="nav-link" href="/login" style="cursor: pointer;">
+                        Login
+                    </a>
+
+                </li>
+                <li class="nav-item dropdown" *ngIf="!isLoggedIn()">
+                    <a class="nav-link" href="/signup" style="cursor: pointer;">
+                        Signup
+                    </a>
+
+                </li>
+                <li class="nav-item dropdown" *ngIf="isLoggedIn()">
+                    <div class="nav-link" style="cursor: pointer;">
+                        Hello,{{getUsername()}}
+                    </div>
+
+                </li>
+                <li class="nav-item dropdown" *ngIf="isLoggedIn()">
+                    <div class="nav-link" (click)="logout()" style="cursor: pointer;">
+                        Logout
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

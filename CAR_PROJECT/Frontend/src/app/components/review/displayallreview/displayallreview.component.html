@@ -1,0 +1,31 @@
+<app-dashboard></app-dashboard>
+<div class="container">
+    <table class="table table-primary col-sm-5">
+        <thead>
+            <tr>
+                <th>SNO.</th>
+                <th>Review ID</th>
+                <th>Customer Name</th>
+                <th>Driver Name</th>
+                <th>Rating</th>
+                <th>Comments</th>
+                <th>DELETE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let review of reviewList; index as i">
+                <td>{{ i + 1 }}</td>
+                <td>{{ review.reviewId }}</td>
+                <td>{{ review.customerName }}</td>
+                <td>{{ review.driverName }}</td>
+                <td>{{ review.rating }}</td>
+                <td>{{ review.comments }}</td>
+                <td>
+                    <button type="button" class="btn btn-danger" (click)="deleteById(review.reviewId)">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,29 @@
+<app-dashboard></app-dashboard>
+
+<form #myform="ngForm" method="post" class="container col-md-4" (ngSubmit)="updatecab(myform.value)">
+    <div class="form-group">
+        <label>Cab ID:</label>
+        <input type="number" class="form-control" name="cabId" #cabIdControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="cabIdControl.touched && cabIdControl.invalid">Cab ID is mandatory</span>
+    </div> 
+    
+    <div class="form-group">
+        <label>Cab Name:</label>
+        <input type="text" class="form-control" #cabNameControl="ngModel" name="cabName" required ngModel>
+        <span style="color: red;" *ngIf="cabNameControl.touched && cabNameControl.invalid">Cab Name is mandatory</span>
+    </div>
+    
+    <div class="form-group">
+        <label>Date Of Book:</label>
+        <input type="date" class="form-control" #dateOfBookControl="ngModel" name="dateOfBook" required ngModel>
+        <span style="color: red;" *ngIf="dateOfBookControl.touched && dateOfBookControl.invalid">dateOfBook is mandatory</span>
+    </div>
+    
+    <div class="form-group">
+        <label>Driver ID:</label>
+        <input type="number" class="form-control" #driverIdControl="ngModel" name="driverId" required ngModel>
+        <span style="color: red;" *ngIf="driverIdControl.touched && driverIdControl.invalid">Driver ID is mandatory</span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" [disabled]="myform.invalid">Update</button>
+</form>

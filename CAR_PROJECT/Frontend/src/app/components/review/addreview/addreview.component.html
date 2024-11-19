@@ -1,0 +1,39 @@
+<app-dashboard></app-dashboard>
+
+<form #reviewForm="ngForm" method="post" class="container col-md-4" (ngSubmit)="insertReview(reviewForm.value)">
+
+    <div class="form-group">
+        <label>Customer Name:</label>
+        <input type="text" class="form-control" name="customerName" #customerNameControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="customerNameControl.touched && customerNameControl.invalid">
+            Customer Name is Mandatory
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label>Driver Name:</label>
+        <input type="text" class="form-control" name="driverName" #driverNameControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="driverNameControl.touched && driverNameControl.invalid">
+            Driver Name is Mandatory
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label>Rating:</label>
+        <input type="number" step="1" min="1" max="5" class="form-control" name="rating" #ratingControl="ngModel" required ngModel>
+        <span style="color: red;" *ngIf="ratingControl.touched && ratingControl.invalid">
+            Rating is Mandatory and must be between 1 and 5
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label>Comments:</label>
+        <textarea class="form-control" name="comments" #commentsControl="ngModel" required ngModel></textarea>
+        <span style="color: red;" *ngIf="commentsControl.touched && commentsControl.invalid">
+            Comments are Mandatory
+        </span>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="reviewForm.invalid">Add</button>
+
+</form>
